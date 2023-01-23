@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class RegisterController extends AbstractController
 {
-    #[Route('/api/inscription', name: 'app_register')]
+    #[Route('/api/inscription', name: 'app_register', methods:['GET'])]
     public function index(): Response
     {
     $user = new User();
