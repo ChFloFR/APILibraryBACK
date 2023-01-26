@@ -30,6 +30,8 @@ class Book
     #[ORM\Column(length: 255)]
     private ?string $coverText = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $pathImg = null;
 
     public function getId(): ?int
     {
@@ -71,7 +73,17 @@ class Book
 
         return $this;
     }
+        public function getPathImg(): ?string
+    {
+        return $this->pathImg;
+    }
 
+    public function setPathImage(string $pathImg): self
+    {
+        $this->pathImg = $pathImg;
+
+        return $this;
+    }
     public function getCategorie(): ?string
     {
         return $this->categorie;
