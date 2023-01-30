@@ -12,7 +12,7 @@ use App\Repository\AuthorRepository;
 use App\Entity\Author;
 
 
-#[Route('api/author')]
+#[Route('/api/author')]
 class AuthorController extends AbstractController
 {
     /**

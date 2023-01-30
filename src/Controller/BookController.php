@@ -29,5 +29,11 @@ class BookController extends AbstractController
             'note' => null
         ];
         return new JsonResponse($bookArray);
-    }}
+        }
+    }
+    #[Route('/book/create', name: 'app_book',  methods:"POST")]
+
+    public function createBook(){
+
+    }
 }

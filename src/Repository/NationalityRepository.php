@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\Nationalité;
+use App\Entity\Nationality;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Nationalité>
+ * @extends ServiceEntityRepository<Nationality>
  *
- * @method Nationalité|null find($id, $lockMode = null, $lockVersion = null)
- * @method Nationalité|null findOneBy(array $criteria, array $orderBy = null)
- * @method Nationalité[]    findAll()
- * @method Nationalité[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Nationality|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Nationality|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Nationality[]    findAll()
+ * @method Nationality[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class NationalitéRepository extends ServiceEntityRepository
+class NationalityRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Nationalité::class);
+        parent::__construct($registry, Nationality::class);
     }
 
-    public function save(Nationalité $entity, bool $flush = false): void
+    public function save(Nationality $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class NationalitéRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Nationalité $entity, bool $flush = false): void
+    public function remove(Nationality $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class NationalitéRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return Nationalité[] Returns an array of Nationalité objects
+//     * @return Nationality[] Returns an array of Nationality objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class NationalitéRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Nationalité
+//    public function findOneBySomeField($value): ?Nationality
 //    {
 //        return $this->createQueryBuilder('n')
 //            ->andWhere('n.exampleField = :val')

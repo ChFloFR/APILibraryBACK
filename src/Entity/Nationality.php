@@ -2,11 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\NationalitéRepository;
+use App\Repository\NationalityRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: NationalitéRepository::class)]
-class Nationalité
+#[ORM\Entity(repositoryClass: NationalityRepository::class)]
+class Nationality
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -14,7 +14,7 @@ class Nationalité
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $Nationalité = null;
+    private ?string $Nationality = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $flag = null;
@@ -24,14 +24,14 @@ class Nationalité
         return $this->id;
     }
 
-    public function getNationalité(): ?string
+    public function getNationality(): ?string
     {
-        return $this->Nationalité;
+        return $this->Nationality;
     }
 
-    public function setNationalité(?string $Nationalité): self
+    public function setNationality(?string $Nationality): self
     {
-        $this->Nationalité = $Nationalité;
+        $this->Nationality = $Nationality;
 
         return $this;
     }
